@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<style type="text/css">
+   
+img {
+    width: 100%;
+    opacity: .7;
+}
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-family: Garamond;
+  font-style: cursive;
+}
+#header {
+  background-color: #fcbf83;
+}
+</style>
+
+<body>
+    <div>
+      <div id="header">
+        <h1>The Importance of Letters</h1
+      </div>
+      <div class="container">
+        <img src="assets/republic.png" alt="TheRepublic" class="image">
+      </div>
+    </div>
+    
+
+
+          
+    <!--</container>-->
+    
+  <script type="text/javascript">
+
+  var userWins = 0;
+  var guessesLeft = 10;
+    alert("WHAT LETTER AM I THINKING OF?");
+
+  var letters = ["a",'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  var computerGuess = letters[Math.floor(Math.random() * letters.length)];
+      //alert(computerGuess)//
+      
+
+  document.onkeyup = function(event) {  
+    var userInput = event.key;
+       if (computerGuess === userInput) {
+          alert("You win...you read my mind!");
+            userWins = userWins + 1;
+            guessesLeft = guessesLeft - 1;
+        } 
+          else {
+            alert("Sorry, try again")
+          }
+        }
+      
+
+
+    
+        
+    </script>
+</body>
+</html>
